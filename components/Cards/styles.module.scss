@@ -1,4 +1,5 @@
 .Cards {
+  font-family: "Signika", sans-serif;
   margin: 20px 5px 20px 5px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -7,6 +8,7 @@
   grid-row-gap: 20px;
   .Card {
     border: 2px solid black;
+    border-radius: 25px;
     text-align: center;
 
     img {
@@ -21,8 +23,15 @@
     .price {
       display: flex;
       align-items: center;
-      justify-content: flex-start;
       font-size: 45px;
+      svg {
+        font-size: 40px;
+      }
+    }
+    .cart {
+      display: flex;
+      font-size: 45px;
+      padding: 0px 0px 0px 0px;
     }
   }
   .skeleton {

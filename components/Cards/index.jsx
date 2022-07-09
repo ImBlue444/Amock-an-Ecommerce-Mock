@@ -1,21 +1,7 @@
-import React, { useEffect, useState } from "react";
 import styles from "../Cards/styles.module.scss";
-import { BiEuro } from "react-icons/bi";
-import axios from "axios";
+import { FaShoppingCart } from "react-icons/fa";
 
-function Cards() {
-  const [data, setData] = useState([]);
-
-  useEffect(() => {
-    async function fetchData() {
-      const request = await axios.get("https://fakestoreapi.com/products");
-      console.log(request.data);
-      setData(request.data);
-      return request;
-    }
-    fetchData();
-  }, ["https://fakestoreapi.com/products"]);
-
+function Cards({ data }) {
   return (
     <div className={styles.Cards}>
       {data.length < 1 ? <div>App is loading...</div> : null}
@@ -26,9 +12,9 @@ function Cards() {
           <p className={styles.description} key={i + e.description}>
             {e.description.substring(0, 200) + "..."}
           </p>
-          <p className={styles.price}>
-            <BiEuro />
-            {e.price}
+          <p className={styles.price}>{e.price} €</p>
+          <p className={styles.cart}>
+            Add to cart <FaShoppingCart />
           </p>
         </div>
       ))}
