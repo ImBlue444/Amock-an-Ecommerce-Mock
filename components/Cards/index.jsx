@@ -7,7 +7,12 @@ function Cards({ data }) {
       {data.length < 1 ? <div>App is loading...</div> : null}
       {data.map((e, i) => (
         <div key={i + i} className={styles.Card}>
-          <img key={i} src={e.image} alt="Image not found" />
+          <img
+            onClick={() => console.log(e.id)}
+            key={i}
+            src={e.image}
+            alt="Image not found"
+          />
           <h2 key={i + e.title}>{e.title}</h2>
           <p className={styles.description} key={i + e.description}>
             {e.description.substring(0, 200) + "..."}

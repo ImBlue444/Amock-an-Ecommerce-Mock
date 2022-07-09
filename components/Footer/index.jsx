@@ -11,10 +11,14 @@ function Footer() {
       <h3>Created by Dennis Badagliacca</h3>
       <hr />
       <h4>Contacts:</h4>
-      <a href="https://github.com/ImBlue444" target="_blank">
+      <a href="https://github.com/ImBlue444" target="_blank" rel="noreferrer">
         <FaGithub />
       </a>{" "}
-      <a href="https://www.linkedin.com/in/dennisbadagliacca/" target="_blank">
+      <a
+        href="https://www.linkedin.com/in/dennisbadagliacca/"
+        target="_blank"
+        rel="noreferrer"
+      >
         <FaLinkedin />
       </a>
     </div>
