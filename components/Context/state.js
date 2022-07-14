@@ -16,9 +16,33 @@ export function AppWrapper({ children }) {
     }
     fetchData();
   }, ["https://fakestoreapi.com/products"]);
+
+  const [inputValue, setInputValue] = useState("");
+  const [filteredData, setFilteredData] = useState(data);
+  const eventHandler = (event) => {
+    setInputValue(event.target.value);
+    function searchEngine() {
+      if (inputValue.length - 1 < 1) {
+        setFilteredData(data);
+      } else
+        setFilteredData(
+          data.filter((val) =>
+            val.title.toLowerCase().includes(inputValue.toLowerCase())
+          )
+        );
+      return console.log(inputValue);
+    }
+    searchEngine();
+  };
+
   let sharedState = {
     data,
     setData,
+    eventHandler,
+    filteredData,
+    setFilteredData,
+    inputValue,
+    setInputValue,
   };
 
   return (

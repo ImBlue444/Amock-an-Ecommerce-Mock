@@ -1,17 +1,10 @@
 import styles from "../Navbar/styles.module.scss";
 import { FaShoppingCart } from "react-icons/fa";
-import { FaSearch } from "react-icons/fa";
-import { GiHamburgerMenu, GiTargetArrows } from "react-icons/gi";
+import { GiHamburgerMenu } from "react-icons/gi";
 import { useAppContext } from "../Context/state";
-import { useState } from "react";
 
 function Navbar() {
   const context = useAppContext();
-  const [inputValue, setInputValue] = useState("");
-
-  const eventHandler = (event) => {
-    setInputValue(event.target.value);
-  };
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -33,20 +26,9 @@ function Navbar() {
           <input
             className={styles.Search}
             type="text"
-            onChange={eventHandler}
+            onChange={context.eventHandler}
+            placeholder={"Search..."}
           ></input>
-          <button
-            onClick={() =>
-              context.setData(
-                context.data.filter((val) =>
-                  val.title.toLowerCase().includes(inputValue.toLowerCase())
-                )
-              )
-            }
-            className={styles.SearchButton}
-          >
-            <FaSearch />
-          </button>
         </form>
       </div>
 

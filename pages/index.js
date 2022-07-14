@@ -13,11 +13,11 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Amock</title>
+        <title>Amock E-Commerce</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Carousel />
-      <Cards data={context.data} />
+      <Cards data={context.filteredData} />
     </div>
   );
 }
