@@ -30,7 +30,7 @@ export function AppWrapper({ children }) {
             val.title.toLowerCase().includes(inputValue.toLowerCase())
           )
         );
-      return console.log(inputValue);
+      return console.log(inputValue.length - 1);
     }
     searchEngine();
   };

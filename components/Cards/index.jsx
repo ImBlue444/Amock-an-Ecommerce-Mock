@@ -4,7 +4,7 @@ import { FaShoppingCart } from "react-icons/fa";
 function Cards({ data }) {
   return (
     <div className={styles.Cards}>
-      {data.length < 1 ? <div>App is loading...</div> : null}
+      {data.length < 1 ? <div>No results...</div> : null}
       {data.map((e, i) => (
         <div key={i + i} className={styles.Card}>
           <img

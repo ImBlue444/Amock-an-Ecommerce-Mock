@@ -2,7 +2,6 @@ import React from "react";
 import styles from "../Footer/styles.module.scss";
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
-import { GrMail } from "react-icons/gr";
 
 function Footer() {
   return (
