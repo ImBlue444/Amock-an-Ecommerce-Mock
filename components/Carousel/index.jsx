@@ -5,7 +5,7 @@ import Carousel from "better-react-carousel";
 function CarouselHome() {
   return (
     <div className={styles.Carousel}>
-      <Carousel cols={1} rows={1} gap={10} loop>
+      <Carousel cols={1} rows={1} gap={10} loop autoplay={3500}>
         <Carousel.Item>
           <img
             width="100%"
@@ -19,10 +19,16 @@ function CarouselHome() {
           />
         </Carousel.Item>
         <Carousel.Item>
-          <img width="100%" src="https://picsum.photos/800/600?random=3" />
+          <img
+            width="100%"
+            src="https://media.istockphoto.com/photos/man-at-the-shopping-picture-id868718238?k=20&m=868718238&s=612x612&w=0&h=w42q_p1qak9lhVhXKDw1r964uV-AmzSSzC0UsMlMARQ="
+          />
         </Carousel.Item>
         <Carousel.Item>
-          <img width="100%" src="https://picsum.photos/800/600?random=4" />
+          <img
+            width="100%"
+            src="https://www.smeup.com/magazine/wp-content/uploads/sites/5/2018/03/shopping-experience.jpg"
+          />
         </Carousel.Item>
       </Carousel>
     </div>

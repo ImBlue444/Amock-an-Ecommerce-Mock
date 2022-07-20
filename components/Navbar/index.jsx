@@ -1,7 +1,7 @@
 import styles from "../Navbar/styles.module.scss";
 import { FaShoppingCart } from "react-icons/fa";
-import { GiHamburgerMenu } from "react-icons/gi";
 import { useAppContext } from "../Context/state";
+import Link from "next/link";
 
 function Navbar() {
   const context = useAppContext();
@@ -11,36 +11,52 @@ function Navbar() {
   };
 
   return (
-    <div className={styles.Navbar}>
-      <div className={styles.burgerMenu}>
-        <GiHamburgerMenu />
-      </div>
-      <img
-        src="https://castasrl.it/wp-content/uploads/2016/12/envato-logo-small.svg"
-        alt="Img not found"
-        width="60"
-      />
-      <h3 className={styles.Location}>Select your location</h3>
-      <div className={styles.SearchBar}>
-        <form onSubmit={handleSubmit}>
-          <input
-            className={styles.Search}
-            type="text"
-            onChange={context.eventHandler}
-            placeholder={"Search..."}
-          ></input>
-        </form>
-      </div>
+    <div>
+      <nav className="navbar" role="navigation" aria-label="main navigation">
+        <div className="navbar-menu">
+          <div className="navbar-start">
+            <div className="navbar-brand">
+              <Link href="/">
+                <img
+                  className={styles.homeImg}
+                  src="https://castasrl.it/wp-content/uploads/2016/12/envato-logo-small.svg"
+                  alt="Img not found"
+                  width="60"
+                />
+              </Link>
+              <h3 className="navbar-item">
+                <b>Select your location</b>
+              </h3>
+              <div className="navbar-item">
+                <form className="control " onSubmit={handleSubmit}>
+                  <p className="control">
+                    <input
+                      className={styles.barInput}
+                      type="text"
+                      onChange={context.eventHandler}
+                      placeholder={"Search..."}
+                    ></input>
+                  </p>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div className="navbar-end">
+            <a className="navbar-item">
+              <b>Log in</b>
+            </a>
+            <a className="navbar-item">
+              <b>Sign in</b>
+            </a>
 
-      <a className={styles.LogIn}>
-        <b>Log in</b>
-      </a>
-      <a className={styles.SignIn}>
-        <b>Sign in</b>
-      </a>
-      <button className={styles.Cart}>
-        <FaShoppingCart /> 0
-      </button>
+            <Link href="/cart">
+              <button className="button is-warning is-large">
+                <FaShoppingCart /> {context.cart.length}
+              </button>
+            </Link>
+          </div>
+        </div>
+      </nav>
     </div>
   );
 }

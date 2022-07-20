@@ -5,6 +5,7 @@ import axios from "axios";
 const AppContext = createContext();
 
 export function AppWrapper({ children }) {
+  const [cart, setCart] = useState([]);
   const [data, setData] = useState([]);
 
   useEffect(() => {
@@ -30,7 +31,7 @@ export function AppWrapper({ children }) {
             val.title.toLowerCase().includes(inputValue.toLowerCase())
           )
         );
-      return console.log(inputValue.length - 1);
+      return;
     }
     searchEngine();
   };
@@ -43,6 +44,8 @@ export function AppWrapper({ children }) {
     setFilteredData,
     inputValue,
     setInputValue,
+    cart,
+    setCart,
   };
 
   return (
