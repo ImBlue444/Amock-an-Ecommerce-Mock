@@ -1,6 +1,11 @@
-import { useAppContext } from "../components/Context/state";
+import CartSection from "../components/CartSection";
 
-export default function CartPage() {
-  const context = useAppContext;
-  return <div></div>;
+function Cart() {
+  return (
+    <div>
+      <CartSection />
+    </div>
+  );
 }
+
+export default Cart;

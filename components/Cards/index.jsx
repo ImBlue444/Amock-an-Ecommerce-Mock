@@ -25,7 +25,7 @@ function Cards({ data }) {
           <br />
           <p className={styles.price}>{e.price} €</p>
           <button
-            onClick={() => context.setCart((current) => [...current, e.id])}
+            onClick={() => context.setCart((current) => [...current, e])}
             className={"button is-warning is-large"}
           >
             Add to cart <FaShoppingCart />
