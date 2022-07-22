@@ -7,6 +7,7 @@ const AppContext = createContext();
 export function AppWrapper({ children }) {
   const [cart, setCart] = useState([]);
   const [data, setData] = useState([]);
+  const [modalSwitch, setModalSwitch] = useState(false);
 
   useEffect(() => {
     async function fetchData() {
@@ -46,6 +47,8 @@ export function AppWrapper({ children }) {
     setInputValue,
     cart,
     setCart,
+    modalSwitch,
+    setModalSwitch,
   };
 
   return (

@@ -2,10 +2,12 @@ import React from "react";
 import styles from "../Footer/styles.module.scss";
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
+import { useAppContext } from "../Context/state";
 
 function Footer() {
+  const context = useAppContext();
   return (
-    <div className={styles.Footer}>
+    <div className={context.modalSwitch ? styles.hide : styles.Footer}>
       <h2>Amock - An E-Commerce Mock</h2>
       <h3>Created by Dennis Badagliacca</h3>
       <hr />

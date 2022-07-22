@@ -30,7 +30,6 @@ function Cards({ data }) {
           >
             Add to cart <FaShoppingCart />
           </button>
-          <button onClick={() => console.log(context.cart)}>log</button>
         </div>
       ))}
     </div>

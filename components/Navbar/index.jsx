@@ -11,7 +11,7 @@ function Navbar() {
   };
 
   return (
-    <div>
+    <div className={context.modalSwitch ? styles.hide : null}>
       <nav className="navbar" role="navigation" aria-label="main navigation">
         <div className="navbar-menu">
           <div className="navbar-start">

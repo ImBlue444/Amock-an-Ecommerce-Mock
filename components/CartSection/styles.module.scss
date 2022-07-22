@@ -1,0 +1,37 @@
+.CartSection {
+  font-family: "Signika", sans-serif;
+  .cartInfo {
+    font-size: 60px;
+  }
+  .cartCards {
+    margin: 10px 15px 10px 15px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    img {
+      display: block;
+      width: 30%;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 20px;
+    }
+    h3 {
+      font-size: 20px;
+    }
+    .description {
+      font-size: 20px;
+    }
+    p {
+      font-size: 40px;
+    }
+  }
+  .buttonGroup {
+    margin: 20px 5px 20px 5px;
+    display: flex;
+    justify-content: space-evenly;
+    button {
+      border-radius: 10px;
+    }
+  }
+}
