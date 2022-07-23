@@ -1,15 +1,51 @@
-.barInput {
-  background: 0;
-  border: 0;
-  outline: none;
-  width: 90vw;
-  max-width: 1000px;
-  font-size: 1.5em;
-  transition: padding 0.3s 0.2s ease;
-}
-.homeImg {
-  cursor: pointer;
-}
-.hide {
-  display: none;
+.Navbar {
+  margin-top: 0px;
+  .NavbarGroup {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    font-size: 30px;
+    .homeImg {
+      cursor: pointer;
+    }
+    .title {
+      width: 10rem;
+      padding: 0rem 12rem 0rem 1rem;
+      font-size: 25px;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+    .barInput {
+      border: none;
+      width: 60rem;
+      font-size: 25px;
+    }
+
+    .logInMsg {
+      padding: 0rem 19rem 0rem 1rem;
+      width: 3rem;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+    .LogInOut {
+      padding: 0rem 1.5rem 0rem 1.5rem;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+    .SignUp {
+      padding: 0rem 1.5rem 0rem 1rem;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+    .hideNav {
+      opacity: 0;
+    }
+    .hideMsg {
+      opacity: 0;
+      padding: 0rem 19rem 0rem 1rem;
+      width: 3rem;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+  }
 }

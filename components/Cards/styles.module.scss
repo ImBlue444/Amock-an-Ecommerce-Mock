@@ -1,16 +1,16 @@
 .Cards {
   font-family: "Signika", sans-serif;
-  margin: 20px 5px 20px 5px;
+  margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
   grid-column-gap: 10px;
   grid-row-gap: 20px;
   overflow: hidden;
+  place-items: center;
 
   .Card {
     width: 480px;
-
     border: 2px solid black;
     border-radius: 25px;
     text-align: center;

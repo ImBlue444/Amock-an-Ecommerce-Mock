@@ -12,6 +12,10 @@ export default function Home() {
       <Head>
         <title>Amock E-Commerce</title>
         <link rel="icon" href="/favicon.ico" />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1"
+        ></meta>
       </Head>
       <Carousel />
       <Cards data={context.inputValue ? context.filteredData : context.data} />

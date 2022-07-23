@@ -49,6 +49,30 @@ export default function CartSection() {
           <button className="button is-warning is-large">Back to shop</button>
         </Link>
       </div>
+      <div class={context.modalSwitch ? "modal is-active" : "modal"}>
+        <div class="modal-background"></div>
+        <div class="modal-content">
+          <article class="message">
+            <div class="message-header">
+              <p>Thanks!</p>
+              <button
+                class="delete"
+                aria-label="delete"
+                onClick={() => context.setModalSwitch(!context.modalSwitch)}
+              ></button>
+            </div>
+            <div class="message-body">
+              Thanks for the intrest, if you liked my demo contact me via
+              Linkedin or e-mail: dennis.badagliacca444@gmail.com.
+              <br />
+              Follow my GitHub for further updates or other projects. Hope to
+              see you soon!
+              <br />
+              Dennis Badagliacca
+            </div>
+          </article>
+        </div>
+      </div>
     </div>
   );
 }
