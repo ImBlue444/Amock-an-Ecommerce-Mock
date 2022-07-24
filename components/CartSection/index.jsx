@@ -14,9 +14,9 @@ export default function CartSection() {
       </h2>
       <div className={styles.cartCards}>
         {context.cart.map((e, i) => (
-          <div key={id + "div"} className="card">
+          <div key={e.id + "div"} className="card">
             <button
-              key={id + "buttons"}
+              key={e.id + "buttons"}
               className="button is-danger is-small"
               onClick={() =>
                 context.setCart([...context.cart.filter((x) => x.id != e.id)])
@@ -25,12 +25,12 @@ export default function CartSection() {
               X
             </button>
             <br />
-            <img key={id + "image"} src={e.image} width={200}></img>
-            <h3 key={id}>
+            <img key={e.id + "image"} src={e.image} width={200}></img>
+            <h3 key={e.id}>
               <b>{e.title}</b>
             </h3>
-            <p key={id + price}>{e.price} €</p>
-            <p key={id + description} className={styles.description}>
+            <p key={e.id + e.price}>{e.price} €</p>
+            <p key={e.id + e.description} className={styles.description}>
               <i>{e.description.substring(0, 200) + "..."}</i>
             </p>
           </div>
