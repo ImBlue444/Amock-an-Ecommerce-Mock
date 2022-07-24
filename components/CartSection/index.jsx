@@ -14,7 +14,7 @@ export default function CartSection() {
       </h2>
       <div className={styles.cartCards}>
         {context.cart.map((e, i) => (
-          <div className="card">
+          <div key={id + "div"} className="card">
             <button
               key={id + "buttons"}
               className="button is-danger is-small"
