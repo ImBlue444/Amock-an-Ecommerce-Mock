@@ -45,7 +45,6 @@ function Navbar() {
         </h3>
 
         <a
-          className={styles.LogInOut}
           onClick={() => {
             context.userLogged
               ? context.setUserLogged(false)

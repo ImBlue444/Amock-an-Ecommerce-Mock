@@ -16,6 +16,7 @@ export default function CartSection() {
         {context.cart.map((e, i) => (
           <div className="card">
             <button
+              key={id + "buttons"}
               className="button is-danger is-small"
               onClick={() =>
                 context.setCart([...context.cart.filter((x) => x.id != e.id)])
@@ -24,12 +25,12 @@ export default function CartSection() {
               X
             </button>
             <br />
-            <img src={e.image} width={200}></img>
-            <h3>
+            <img key={id + "image"} src={e.image} width={200}></img>
+            <h3 key={id}>
               <b>{e.title}</b>
             </h3>
-            <p>{e.price} €</p>
-            <p className={styles.description} key={i + e.description}>
+            <p key={id + price}>{e.price} €</p>
+            <p key={id + description} className={styles.description}>
               <i>{e.description.substring(0, 200) + "..."}</i>
             </p>
           </div>
@@ -49,19 +50,19 @@ export default function CartSection() {
           <button className="button is-warning is-large">Back to shop</button>
         </Link>
       </div>
-      <div class={context.modalSwitch ? "modal is-active" : "modal"}>
-        <div class="modal-background"></div>
-        <div class="modal-content">
-          <article class="message">
-            <div class="message-header">
+      <div className={context.modalSwitch ? "modal is-active" : "modal"}>
+        <div className="modal-background"></div>
+        <div className="modal-content">
+          <article className="message">
+            <div className="message-header">
               <p>Thanks!</p>
               <button
-                class="delete"
+                className="delete"
                 aria-label="delete"
                 onClick={() => context.setModalSwitch(!context.modalSwitch)}
               ></button>
             </div>
-            <div class="message-body">
+            <div className="message-body">
               Thanks for the intrest, if you liked my demo contact me via
               Linkedin or e-mail: dennis.badagliacca444@gmail.com.
               <br />
